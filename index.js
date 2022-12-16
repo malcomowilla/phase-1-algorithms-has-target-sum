@@ -1,18 +1,51 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for(let i=0;i<array.length ;i++){
+
+    const x = target-array[i]
+
+    for(let j=i+1;j<array.length;j++){
+
+      if (array[j] === x){
+        return true
+      }
+    }
+
+  }
+  return false
 }
+
 
 /* 
   Write the Big O time complexity of your function here
+  
 */
+O(n**2)
+
 
 /* 
   Add your pseudocode here
+  Loop through each value in the array
+Find the difference(x) between the target and the current value in
+the array
+Loop through every other value in front of the selected value in the array
+Compare the current loop value(j) to the difference(x)
+if j===x
+return true 
 */
 
 /*
+
   Add written explanation of your solution here
+  Loop through each value in the array
+Find the difference(x) between the target and the current value in
+the array
+Loop through every other value in front of the selected value in the array
+Compare the current loop value(j) to the difference(x)
+if j===x
+return true 
 */
+
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
